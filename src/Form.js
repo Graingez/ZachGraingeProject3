@@ -13,7 +13,7 @@ const Form = (props) => {
         }}>
             <label htmlFor="bookFormat">Select a Book Format:</label>
             <select name="" id="bookFormat" onChange={handleChange} value={selectValue}>
-                <option value="placeholder" disabled>Select a Book Format</option>
+                <option value="placeholder" disabled> Book Format</option>
                 <option value="hardcover-fiction">Hardcover Fiction</option>
                 <option value="picture-books">Picture Books</option>
                 <option value="hardcover-nonfiction">Hardcover Nonfiction</option>

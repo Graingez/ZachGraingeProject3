@@ -1,20 +1,35 @@
-import Form from "./Form";
+import React, { useState, useEffect } from "react";
 const BookDisplay = (props) => {
 
     console.log(props.books.length);
+
+    const [currentDate, setCurrentDate] = useState('')
+
+    useEffect(() => {
+        const date = new Date().getDate();
+        const month = new Date().getMonth() + 1;
+
+        const year = new Date().getFullYear();
+        setCurrentDate(month + '/' + date + '/' + year)
+        return () => {
+
+        }
+
+
+    }, [])
 
     return (
         <>
             <section className="BookShelf wrapper">
                 {
-                    props.books.length === 0
+                    props.books.length == 0
                         ? (
                             <section className="noBooks wrapper">
                                 <h1>please pick a format</h1>
                             </section>
                         ) : (
                             <>
-                                <h5>{props.books.length}</h5>
+                                <h5>Here is a list of the top {props.books.length} best sellers as of {currentDate}</h5>
                                 <section className="returnedBooks wrapper">
                                     {
                                         props.books.map((book) => {
