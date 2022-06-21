@@ -54,6 +54,7 @@ ul{
   background-color: rgb(162, 136, 105);
   border: 2px solid rgba(0,0,0,0.3);
   transition: .1s ease-out;
+  box-shadow: inset 0px 0px 5px 5px rgba(0,0,0,0.2);
 }
  .formatItem a{
   color: azure;
@@ -70,6 +71,7 @@ link{
 }
 .formatItem:active{
   scale: 120%;
+  box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.3);
 }
 /* nav */
 /* form
@@ -184,13 +186,27 @@ button:active{
   font-size: .9rem;
 }
 .bookInfo a{
-
+  
+  text-decoration: none;
+  border: 2px solid azure;
+  padding:10px 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0px 5px 4px 4px rgb(240, 255, 255, 0.3);
+  color: azure;
+  transition: .1 ease-in-out;
 }
-.bookBox:hover{
+.bookInfo a:active{
+box-shadow: inset 0px 0px 5px 5px rgb(240, 255, 255, 0.8);
+margin-top: 5px;
+}
+.bookBox:hover,
+.bookBox:focus{
   box-shadow: 0px 10px 0px 4px rgba(0,0,0,0);
   scale:105%
 }
-.bookBox:hover .bookInfo{
+.bookBox:hover .bookInfo,
+.bookBox:focus .bookInfo{
   height: 100%;
   
 }

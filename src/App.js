@@ -1,7 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import BookDisplay from './BookDisplay';
+import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import HardcoverNonfiction from './HardcoverNonfiction';
 import PictureBooks from './PictureBooks';
@@ -18,7 +17,7 @@ import NavList from './NavList';
 function App() {
 
   // const [bookFormat, setBookFormat] = useState(null);
-  const [bookInfo, setBookInfo] = useState([]);
+  // const [bookInfo, setBookInfo] = useState([]);
 
   const [currentDate, setCurrentDate] = useState('')
 
