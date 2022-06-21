@@ -1,5 +1,4 @@
 import './App.css';
-import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import HardcoverNonfiction from './HardcoverNonfiction';
@@ -18,20 +17,6 @@ function App() {
 
   // const [bookFormat, setBookFormat] = useState(null);
   // const [bookInfo, setBookInfo] = useState([]);
-
-  const [currentDate, setCurrentDate] = useState('')
-
-  useEffect(() => {
-    const date = new Date().getDate();
-    const month = new Date().getMonth('en-us', { month: 'long' }) + 1;
-    const year = new Date().getFullYear();
-    setCurrentDate(month + '/' + date + '/' + year)
-    return () => {
-
-    }
-
-
-  }, [])
 
   // useEffect(() => {
   //   if (bookFormat) {
