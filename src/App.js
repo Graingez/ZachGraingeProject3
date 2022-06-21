@@ -12,6 +12,7 @@ import TradeFictionPaperback from './TradeFictionPaperback';
 import GraphicbooksandManga from './GraphicbooksandManga';
 import PageNotFound from './PageNotFound';
 import NavList from './NavList';
+import Footer from './Footer';
 
 function App() {
 
@@ -39,7 +40,7 @@ function App() {
       <Header />
       <NavList />
       <Routes>
-        <Route path='/' element={<h1>select a book format</h1>} />
+        <Route path='/' element={<h1 className='findBookLabel'>Select A Format to find some Books!</h1>} />
         <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction />} />
         <Route path='/PictureBooks' element={<PictureBooks />} />
         <Route path='/HardcoverFiction' element={<HardcoverFiction />} />
@@ -51,6 +52,7 @@ function App() {
         <Route path='/GraphicbooksandManga' element={<GraphicbooksandManga />} />
         <Route path='*' element={<PageNotFound />} />
       </Routes>
+      <Footer />
       {/* <HardcoverNonfiction /> */}
       {/* <Form handleSubmit={selectBookFormat} /> */}
       {/* <h5>Here is a list of the top {bookInfo.length} best selling {bookFormat} books as of {currentDate}</h5> */}

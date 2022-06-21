@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Merienda&display=swap');
+
+/* font-family: 'Amatic SC', cursive;
+font-family: 'Merienda', cursive; */
+
 
 html{
   font-size: 125%;
@@ -34,13 +39,25 @@ ul{
 }
 .bookHeader h1{
   margin: 0;
-  color: white;
-  font-size: 3rem;
+  color: azure;
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  font-size: 4rem;
+  text-shadow: 3px 4px rgb(20, 106, 118);
+}
+.findBookLabel{
+  font-family: 'Merienda', cursive;
+  font-weight: bold;
+  border-bottom: 2px dashed rgb(139, 134, 134);
+  margin-bottom: 50%;
+  padding: 20px 0;
+  text-shadow: 2px 2px azure;
 }
 /* nav */
 .formatList{
   max-width: 900px;
   margin: 20px auto;
+  padding-left: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -66,12 +83,22 @@ link{
 }
 .formatItem:hover,
 .formatItem:focus{
-  background-color: lightcoral;
+  background-color: rgb(240, 128, 128);
   
 }
 .formatItem:active{
   scale: 120%;
+  -webkit-transform:scale(120%);
   box-shadow: 0px 3px 5px 5px rgba(0,0,0,0.3);
+}
+@media(max-width:500px){
+  .formatList{
+    display: flex;
+    flex-basis: 50%;
+  }
+  .formatItem{
+    width: 80%;
+  }
 }
 /* nav */
 /* form
@@ -102,6 +129,14 @@ button:active{
 /* no displayed books */
 
 /* displayed Books */
+.BookShelf h5{
+    font-size: 1.5rem;
+    font-family: 'Merienda', cursive;
+    font-weight: bold;
+    border-bottom: 2px dashed rgb(139, 134, 134);
+    padding-bottom: 30px;
+    text-shadow: 2px 2px azure;
+}
 .bookRank{
   height: 100px;
   width: 112px;
@@ -118,6 +153,7 @@ button:active{
 .rank{
   margin: 20% auto;
   font-size: 2rem;
+  font-family: 'Merienda', cursive;
 }
 .returnedBooks{
   display: flex;
@@ -135,6 +171,7 @@ button:active{
   margin: 20px 15px;
   border-radius: 10px;
   scale: 90%;
+  -webkit-transform:scale(90%);
   transition: .2s ease-in-out;
   box-shadow: 0px 10px 4px 8px rgba(0,0,0,0.3);
 }
@@ -166,8 +203,9 @@ button:active{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.8);
   color: azure;
+  /* font-family: 'Amatic SC', cursive; */
   transition: .3s ease-in-out;
   overflow: hidden;
   border-radius: 10px;
@@ -175,47 +213,81 @@ button:active{
 .bookInfo h2{
   margin: 0;
   transform: skew(-5deg,-5deg);
-  padding: 0px 10px;
+  padding: 0px 20px;
+  font-family: 'Merienda', cursive;
 }
+.bookInfo h3{
 
+margin-bottom: 0;
+}
 .author{
   font-weight: 300;
+  display: block;
+  
 }
 .bookInfo p{
   padding: 0 20px;
-  font-size: .9rem;
+  
+  font-weight: bold;
 }
 .bookInfo a{
-  
+  font-family: 'Merienda', cursive;
   text-decoration: none;
-  border: 2px solid azure;
+  border: 2px solid rgb(240, 128, 128);
   padding:10px 10px;
   margin: 10px auto;
   border-radius: 5px;
-  box-shadow: 0px 5px 4px 4px rgb(240, 255, 255, 0.3);
-  color: azure;
+  box-shadow: 0px 3px 3px 3px rgb(240, 128, 128, 0.4);
+  color: rgb(240, 128, 128);
   transition: .1 ease-in-out;
 }
 .bookInfo a:active{
-box-shadow: inset 0px 0px 5px 5px rgb(240, 255, 255, 0.8);
-margin-top: 5px;
+box-shadow: inset 0px 0px 4px 4px rgb(240, 128, 128, 0.8);
+margin-top: 10px;
 }
 .bookBox:hover,
 .bookBox:focus{
   box-shadow: 0px 10px 0px 4px rgba(0,0,0,0);
-  scale:105%
+  scale:105%;
+  -webkit-transform:scale(105%);
 }
 .bookBox:hover .bookInfo,
 .bookBox:focus .bookInfo{
   height: 100%;
   
 }
+@media(max-width:800px){
+  html{
+    font-size: 100%;
+  }
+  .bookBox{
+    scale: 95%;
+    -webkit-transform:scale(95%);
+  }
+.bookBox:active .bookInfo{
+  height: 100%;
+  
+}
+}
 .errorTitle{
   font-size: 2.5rem;
   margin-bottom: 0px;
   color: black;
   text-shadow: 5px 5px azure;
+  
 }
 .errorBook{
   margin: 0 auto;
+}
+footer{
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: lightcyan;
+}
+.footerText{
+  font-family: 'Merienda', cursive;
+  color: black;
 }
