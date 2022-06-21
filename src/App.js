@@ -55,7 +55,7 @@ function App() {
       <Header />
       <NavList />
       <Routes>
-        <Route path='/' element={<h1>super cool webStore</h1>} />
+        <Route path='/' element={<h1>select a book format</h1>} />
         <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction />} />
         <Route path='/PictureBooks' element={<PictureBooks />} />
         <Route path='/HardcoverFiction' element={<HardcoverFiction />} />

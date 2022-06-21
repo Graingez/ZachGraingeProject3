@@ -173,6 +173,7 @@ button:active{
 .bookInfo h2{
   margin: 0;
   transform: skew(-5deg,-5deg);
+  padding: 0px 10px;
 }
 
 .author{
@@ -192,4 +193,13 @@ button:active{
 .bookBox:hover .bookInfo{
   height: 100%;
   
+}
+.errorTitle{
+  font-size: 2.5rem;
+  margin-bottom: 0px;
+  color: black;
+  text-shadow: 5px 5px azure;
+}
+.errorBook{
+  margin: 0 auto;
 }
