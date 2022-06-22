@@ -219,12 +219,12 @@ button:active{
   font-size: 1rem;
   margin: 0;
   transform: skew(-5deg,-5deg);
-  padding: 0px 20px;
+  padding: 20px 0 20px 20px;
   font-family: 'Merienda', cursive;
 }
 .bookInfo h3{
-
-margin-bottom: 0;
+  margin: 0;
+  font-size: .9rem;
 }
 .author{
   font-weight: 300;
@@ -274,7 +274,7 @@ margin-top: 10px;
     -webkit-transform:scale(95%);
   }
 .bookBox:active .bookInfo{
-  height: 100%;
+  opacity: 1;
   
 }
 }
