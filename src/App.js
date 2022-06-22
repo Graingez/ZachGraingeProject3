@@ -1,7 +1,6 @@
 import './App.css';
-import { useEffect, useState } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
-import BookDisplay from './BookDisplay';
+import { useState, useEffect } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import HardcoverNonfiction from './HardcoverNonfiction';
 import PictureBooks from './PictureBooks';
@@ -14,11 +13,9 @@ import TradeFictionPaperback from './TradeFictionPaperback';
 import GraphicbooksandManga from './GraphicbooksandManga';
 import PageNotFound from './PageNotFound';
 import NavList from './NavList';
+import Footer from './Footer';
 
 function App() {
-
-  // const [bookFormat, setBookFormat] = useState(null);
-  const [bookInfo, setBookInfo] = useState([]);
 
   const [currentDate, setCurrentDate] = useState('')
 
@@ -33,6 +30,9 @@ function App() {
 
 
   }, [])
+  // to be implemented in the future
+  // const [bookFormat, setBookFormat] = useState(null);
+  // const [bookInfo, setBookInfo] = useState([]);
 
   // useEffect(() => {
   //   if (bookFormat) {
@@ -55,18 +55,19 @@ function App() {
       <Header />
       <NavList />
       <Routes>
-        <Route path='/' element={<h1>select a book format</h1>} />
-        <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction />} />
-        <Route path='/PictureBooks' element={<PictureBooks />} />
-        <Route path='/HardcoverFiction' element={<HardcoverFiction />} />
-        <Route path='/PaperbackNonfiction' element={<PaperbackNonfiction />} />
-        <Route path='/SeriesBooks' element={<SeriesBooks />} />
-        <Route path='/ChildrensMiddleGradeHardcover' element={<ChildrensMiddleGradeHardcover />} />
-        <Route path='/YoungAdultHardcover' element={<YoungAdultHardcover />} />
-        <Route path='/TradeFictionPaperback' element={<TradeFictionPaperback />} />
-        <Route path='/GraphicbooksandManga' element={<GraphicbooksandManga />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='/' element={<h1 className='findBookLabel'>Select A Format to find some Books!</h1>} />
+        <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction date={currentDate} />} />
+        <Route path='/PictureBooks' element={<PictureBooks date={currentDate} />} />
+        <Route path='/HardcoverFiction' element={<HardcoverFiction date={currentDate} />} />
+        <Route path='/PaperbackNonfiction' element={<PaperbackNonfiction date={currentDate} />} />
+        <Route path='/SeriesBooks' element={<SeriesBooks date={currentDate} />} />
+        <Route path='/ChildrensMiddleGradeHardcover' element={<ChildrensMiddleGradeHardcover date={currentDate} />} />
+        <Route path='/YoungAdultHardcover' element={<YoungAdultHardcover date={currentDate} />} />
+        <Route path='/TradeFictionPaperback' element={<TradeFictionPaperback date={currentDate} />} />
+        <Route path='/GraphicbooksandManga' element={<GraphicbooksandManga date={currentDate} />} />
+        <Route path='*' element={<PageNotFound date={currentDate} />} />
       </Routes>
+      <Footer />
       {/* <HardcoverNonfiction /> */}
       {/* <Form handleSubmit={selectBookFormat} /> */}
       {/* <h5>Here is a list of the top {bookInfo.length} best selling {bookFormat} books as of {currentDate}</h5> */}
@@ -77,15 +78,4 @@ function App() {
 
 export default App;
 
-
-// psudo code
-// Connect to api and pull the ney york times best selling book list
-// have a search option so the user can get a list of their selected book format
-// take the selected format and have from.js send it up to app.js
-// app.js will then fetch the api data with the new end point
-// app.js will then send the APIdata down to BookDisplay.js where the book list will be displayed on page
-// will include: book image, book title ,author name,book release date, time book has been on list, link to buy the book
-// 
-// stretch goals//
-  // add a ways to favorite a book and have a favorited book list
 

@@ -45,7 +45,7 @@ const BookDisplay = (props) => {
                                                             <h2>{book.title}</h2>
                                                             <h3> <span className="author">Author:</span>{book.author}</h3>
                                                             <p>{book.description}</p>
-                                                            <a href={book.amazon_product_url} target='_blank'>Buy Now!</a>
+                                                            <a href={book.amazon_product_url} target='_blank' rel="noreferrer">Buy Now!</a>
                                                         </div>
                                                     </div>
                                                 </div>

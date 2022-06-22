@@ -1,23 +1,9 @@
 import axios from 'axios'
 import { useState, useEffect } from 'react';
-import { Outlet } from 'react-router-dom';
 
 
-const HardcoverNonfiction = () => {
 
-    const [currentDate, setCurrentDate] = useState('')
-
-    useEffect(() => {
-        const date = new Date().getDate();
-        const month = new Date().getMonth('en-us', { month: 'long' }) + 1;
-        const year = new Date().getFullYear();
-        setCurrentDate(month + '/' + date + '/' + year)
-        return () => {
-
-        }
-
-
-    }, [])
+const HardcoverNonfiction = (props) => {
 
     const [bookInfo, setBookInfo] = useState([]);
     useEffect(() => {
@@ -27,7 +13,6 @@ const HardcoverNonfiction = () => {
                 'api-key': 'RKgJfQQ1AkA17PlGqvBxfd71EfNG0m4v'
             }
         }).then((apiData) => {
-            console.log(apiData.data.results.books)
             setBookInfo(apiData.data.results.books)
         })
     }, [])
@@ -35,7 +20,7 @@ const HardcoverNonfiction = () => {
 
     return (
         <section className="BookShelf wrapper">
-            <h5>Here is a list of the top {bookInfo.length} best selling Hardcover Nonfiction books as of {currentDate}</h5>
+            <h5>Here is a list of the top {bookInfo.length} best selling Hardcover Nonfiction books as of {props.date}</h5>
             <section className="returnedBooks wrapper">
                 {
                     bookInfo.map((book) => {
@@ -51,7 +36,7 @@ const HardcoverNonfiction = () => {
                                         <h2>{book.title}</h2>
                                         <h3> <span className="author">Author:</span>{book.author}</h3>
                                         <p>{book.description}</p>
-                                        <a href={book.amazon_product_url} target='_blank'>Buy Now!</a>
+                                        <a href={book.amazon_product_url} target='_blank' rel="noreferrer">Learn More!</a>
                                     </div>
                                 </div>
                             </div>
