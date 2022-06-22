@@ -3,21 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const HardcoverFiction = () => {
-
-    const [currentDate, setCurrentDate] = useState('')
-
-    useEffect(() => {
-        const date = new Date().getDate();
-        const month = new Date().getMonth('en-us', { month: 'long' }) + 1;
-        const year = new Date().getFullYear();
-        setCurrentDate(month + '/' + date + '/' + year)
-        return () => {
-
-        }
-
-
-    }, [])
+const HardcoverFiction = (props) => {
 
     const [bookInfo, setBookInfo] = useState([]);
     useEffect(() => {
@@ -35,7 +21,7 @@ const HardcoverFiction = () => {
 
     return (
         <section className="BookShelf wrapper">
-            <h5>Here is a list of the top {bookInfo.length} best selling Hardcover Fiction books as of {currentDate}</h5>
+            <h5>Here is a list of the top {bookInfo.length} best selling Hardcover Fiction books as of {props.date}</h5>
             <section className="returnedBooks wrapper">
                 {
                     bookInfo.map((book) => {

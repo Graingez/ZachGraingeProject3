@@ -3,21 +3,8 @@ import { useState, useEffect } from 'react';
 
 
 
-const YoungAdultHardcover = () => {
+const YoungAdultHardcover = (props) => {
 
-    const [currentDate, setCurrentDate] = useState('')
-
-    useEffect(() => {
-        const date = new Date().getDate();
-        const month = new Date().getMonth('en-us', { month: 'long' }) + 1;
-        const year = new Date().getFullYear();
-        setCurrentDate(month + '/' + date + '/' + year)
-        return () => {
-
-        }
-
-
-    }, [])
 
     const [bookInfo, setBookInfo] = useState([]);
     useEffect(() => {
@@ -35,7 +22,7 @@ const YoungAdultHardcover = () => {
 
     return (
         <section className="BookShelf wrapper">
-            <h5>Here is a list of the top {bookInfo.length} best selling Young Adult books as of {currentDate}</h5>
+            <h5>Here is a list of the top {bookInfo.length} best selling Young Adult books as of {props.date}</h5>
             <section className="returnedBooks wrapper">
                 {
                     bookInfo.map((book) => {

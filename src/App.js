@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Header from './Header';
 import HardcoverNonfiction from './HardcoverNonfiction';
@@ -15,6 +16,20 @@ import NavList from './NavList';
 import Footer from './Footer';
 
 function App() {
+
+  const [currentDate, setCurrentDate] = useState('')
+
+  useEffect(() => {
+    const date = new Date().getDate();
+    const month = new Date().getMonth('en-us', { month: 'long' }) + 1;
+    const year = new Date().getFullYear();
+    setCurrentDate(month + '/' + date + '/' + year)
+    return () => {
+
+    }
+
+
+  }, [])
 
   // const [bookFormat, setBookFormat] = useState(null);
   // const [bookInfo, setBookInfo] = useState([]);
@@ -41,16 +56,16 @@ function App() {
       <NavList />
       <Routes>
         <Route path='/' element={<h1 className='findBookLabel'>Select A Format to find some Books!</h1>} />
-        <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction />} />
-        <Route path='/PictureBooks' element={<PictureBooks />} />
-        <Route path='/HardcoverFiction' element={<HardcoverFiction />} />
-        <Route path='/PaperbackNonfiction' element={<PaperbackNonfiction />} />
-        <Route path='/SeriesBooks' element={<SeriesBooks />} />
-        <Route path='/ChildrensMiddleGradeHardcover' element={<ChildrensMiddleGradeHardcover />} />
-        <Route path='/YoungAdultHardcover' element={<YoungAdultHardcover />} />
-        <Route path='/TradeFictionPaperback' element={<TradeFictionPaperback />} />
-        <Route path='/GraphicbooksandManga' element={<GraphicbooksandManga />} />
-        <Route path='*' element={<PageNotFound />} />
+        <Route path='/HardcoverNonfiction' element={<HardcoverNonfiction date={currentDate} />} />
+        <Route path='/PictureBooks' element={<PictureBooks date={currentDate} />} />
+        <Route path='/HardcoverFiction' element={<HardcoverFiction date={currentDate} />} />
+        <Route path='/PaperbackNonfiction' element={<PaperbackNonfiction date={currentDate} />} />
+        <Route path='/SeriesBooks' element={<SeriesBooks date={currentDate} />} />
+        <Route path='/ChildrensMiddleGradeHardcover' element={<ChildrensMiddleGradeHardcover date={currentDate} />} />
+        <Route path='/YoungAdultHardcover' element={<YoungAdultHardcover date={currentDate} />} />
+        <Route path='/TradeFictionPaperback' element={<TradeFictionPaperback date={currentDate} />} />
+        <Route path='/GraphicbooksandManga' element={<GraphicbooksandManga date={currentDate} />} />
+        <Route path='*' element={<PageNotFound date={currentDate} />} />
       </Routes>
       <Footer />
       {/* <HardcoverNonfiction /> */}
