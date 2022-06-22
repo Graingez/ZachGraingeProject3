@@ -30,7 +30,7 @@ function App() {
 
 
   }, [])
-
+  // to be implemented in the future
   // const [bookFormat, setBookFormat] = useState(null);
   // const [bookInfo, setBookInfo] = useState([]);
 
@@ -78,15 +78,4 @@ function App() {
 
 export default App;
 
-
-// psudo code
-// Connect to api and pull the ney york times best selling book list
-// have a search option so the user can get a list of their selected book format
-// take the selected format and have from.js send it up to app.js
-// app.js will then fetch the api data with the new end point
-// app.js will then send the APIdata down to BookDisplay.js where the book list will be displayed on page
-// will include: book image, book title ,author name,book release date, time book has been on list, link to buy the book
-// 
-// stretch goals//
-  // add a ways to favorite a book and have a favorited book list
 

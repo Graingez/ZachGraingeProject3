@@ -7,7 +7,6 @@ font-family: 'Merienda', cursive; */
 html{
   font-size: 125%;
   line-height: 1.25;
-  /* background-color: #D7BBA8; */
   background-image: url(./assets/oldpaper.jpg);
 }
 
@@ -49,7 +48,7 @@ ul{
   font-family: 'Merienda', cursive;
   font-weight: bold;
   border-bottom: 2px dashed rgb(139, 134, 134);
-  margin-bottom: 50%;
+
   padding: 20px 0;
   text-shadow: 2px 2px azure;
 }
@@ -169,7 +168,6 @@ button:active{
 .bookBox{
   display: flex;
   position: relative;
-  /* height:100%;  */
   justify-content: center;
   margin: 0;
   margin: 20px 15px;
