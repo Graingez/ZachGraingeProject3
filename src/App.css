@@ -7,7 +7,8 @@ font-family: 'Merienda', cursive; */
 html{
   font-size: 125%;
   line-height: 1.25;
-  background-image: url(./assets/oldpaper.jpg);
+  /* background-image: url(./assets/oldpaper.jpg); */
+  background: linear-gradient(151deg, rgba(226,150,28,1) 0%, rgba(170,136,67,1) 12%, rgba(206,203,164,1) 70%, rgba(222,203,168,0.3211485277704832) 100%);
 }
 
 .wrapper{
@@ -172,14 +173,14 @@ button:active{
   margin: 0;
   margin: 20px 15px;
   border-radius: 10px;
-  scale: 90%;
+  scale: 95%;
   -webkit-transform:scale(90%);
   transition: .2s ease-in-out;
   box-shadow: 0px 10px 4px 8px rgba(0,0,0,0.3);
 }
 .bookImage{
-  width: 280px;
-  height: 370px;
+  width: 250px;
+  height: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -217,7 +218,7 @@ button:active{
   font-size: 1rem;
   margin: 0;
   transform: skew(-5deg,-5deg);
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 ;
   font-family: 'Merienda', cursive;
 }
 .bookInfo h3{
@@ -292,7 +293,7 @@ footer{
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  background-color: lightcyan;
+  background-color: lightgrey;
 }
 .footerText{
   font-family: 'Merienda', cursive;

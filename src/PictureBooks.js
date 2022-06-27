@@ -22,9 +22,9 @@ const PictureBooks = (props) => {
 
 
     return (
-        <section className="BookShelf wrapper">
-            <h5>Here is a list of the top {bookInfo.length} best selling Picture Books as of {props.date}</h5>
-            <section className="returnedBooks wrapper">
+        <section className="BookShelf ">
+            <h5 className='wrapper'>Here is a list of the top {bookInfo.length} best selling Picture Books as of {props.date}</h5>
+            <section className="returnedBooks ">
                 {
                     bookInfo.map((book) => {
                         return ((
