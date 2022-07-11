@@ -8,7 +8,9 @@ html{
   font-size: 125%;
   line-height: 1.25;
   /* background-image: url(./assets/oldpaper.jpg); */
-  background: linear-gradient(151deg, rgba(226,150,28,1) 0%, rgba(170,136,67,1) 12%, rgba(206,203,164,1) 70%, rgba(222,203,168,0.3211485277704832) 100%);
+  /* background: linear-gradient(151deg, rgba(226,150,28,1) 0%, rgba(170,136,67,1) 12%, rgba(206,203,164,1) 70%, rgba(222,203,168,0.3211485277704832) 100%); */
+  background-color: #E1BC5F;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='144' height='144' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23bf9d41' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 .wrapper{
@@ -49,8 +51,8 @@ ul{
   font-family: 'Merienda', cursive;
   font-weight: bold;
   border-bottom: 2px dashed rgb(139, 134, 134);
-
   padding: 20px 0;
+  padding-bottom: 48vh;
   text-shadow: 2px 2px azure;
 }
 /* nav */
@@ -298,4 +300,6 @@ footer{
 .footerText{
   font-family: 'Merienda', cursive;
   color: black;
+  position: relative;
+  bottom: 0;
 }
